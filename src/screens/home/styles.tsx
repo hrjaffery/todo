@@ -6,7 +6,21 @@ const Styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-  titleColor: colors.black,
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  line: {
+    height: 3,
+    width: 80,
+    backgroundColor: 'lightgrey',
+  },
+  title: {
+    color: colors.black,
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
 });
 
 export default Styles;
