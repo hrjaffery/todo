@@ -1,8 +1,19 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 
 const Home = () => {
-  return <Text>Hello World!</Text>;
+  console.log('object');
+  return (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+      <Text>Hello World!</Text>
+    </View>
+  );
 };
 
 export default Home;
