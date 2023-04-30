@@ -1,18 +1,13 @@
 import React from 'react';
 import {Text, View} from 'react-native';
+import Styles from './styles';
 
 const Home = () => {
   console.log('object');
   return (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: 'green',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+    <View style={Styles.container}>
       <Text>
-        Task <Text>Lists</Text>
+        <Text style={{color: Styles.titleColor}}>Tasks</Text> <Text>Lists</Text>
       </Text>
     </View>
   );

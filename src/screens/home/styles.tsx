@@ -1,11 +1,12 @@
 import {StyleSheet} from 'react-native';
 import {colors} from '../../constants';
 
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
   },
+  titleColor: colors.black,
 });
 
-export default styles;
+export default Styles;
