@@ -11,7 +11,9 @@ const Home = () => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <Text>Hello World!</Text>
+      <Text>
+        Task <Text>Lists</Text>
+      </Text>
     </View>
   );
 };
