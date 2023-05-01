@@ -2,6 +2,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {wp, hp} from '../utils';
+import ListItem from './ListItem';
 
 const ListCard = () => {
   return (
@@ -10,6 +11,9 @@ const ListCard = () => {
         <Text>Trip to Paris</Text>
       </View>
       <View style={styles.line} />
+      <ListItem />
+      <ListItem />
+      <ListItem />
     </View>
   );
 };
@@ -29,6 +33,7 @@ const styles = StyleSheet.create({
   line: {
     width: wp(29),
     height: 2,
+    marginVertical: hp(2),
     backgroundColor: 'lightgray',
   },
 });
