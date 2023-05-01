@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
+import ListCard from '../../components/ListCard';
 import Styles from './styles';
 
 const Home = () => {
@@ -14,6 +15,14 @@ const Home = () => {
           <Text style={{...Styles.title, color: 'lightgray'}}>Lists</Text>
         </Text>
         <View style={Styles.line} />
+      </View>
+      <View style={Styles.listView}>
+        <ScrollView style={{backgroundColor: 'green'}} horizontal={true}>
+          <ListCard />
+          <ListCard />
+          <ListCard />
+          <ListCard />
+        </ScrollView>
       </View>
     </View>
   );

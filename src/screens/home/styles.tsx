@@ -10,10 +10,10 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    flex: 1,
+    flex: 2,
   },
   line: {
-    height: 3,
+    height: 4,
     width: 80,
     backgroundColor: 'lightgrey',
   },
@@ -21,6 +21,12 @@ const Styles = StyleSheet.create({
     color: colors.black,
     fontSize: 30,
     fontWeight: 'bold',
+  },
+  listView: {
+    flex: 2,
+    alignItems: 'center',
+    backgroundColor: 'red',
+    justifyContent: 'center',
   },
 });
 
