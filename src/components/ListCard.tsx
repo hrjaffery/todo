@@ -20,8 +20,8 @@ const ListCard = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: hp(35),
-    width: wp(35),
+    height: hp(33),
+    width: wp(41),
     paddingLeft: wp(6),
     paddingRight: wp(4),
     marginTop: wp(4),
