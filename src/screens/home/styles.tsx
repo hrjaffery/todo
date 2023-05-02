@@ -7,10 +7,19 @@ const Styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flex: 1.5,
+    // backgroundColor: 'red',
+  },
+  headerElements: {
     justifyContent: 'space-between',
-    flex: 2,
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  buttonView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   line: {
     height: 4,
@@ -23,7 +32,7 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   listView: {
-    flex: 2,
+    flex: 4,
     alignItems: 'center',
     backgroundColor: 'red',
     justifyContent: 'center',
