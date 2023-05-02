@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginTop: wp(4),
     marginLeft: wp(4),
     borderRadius: 5,
-    backgroundColor: 'yellow',
+    backgroundColor: 'black',
   },
   headerView: {marginTop: hp(5), justifyContent: 'center'},
   line: {
