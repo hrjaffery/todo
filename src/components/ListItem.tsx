@@ -4,7 +4,7 @@ import {wp, hp} from '../utils';
 import CheckBox from 'react-native-check-box';
 import {colors} from '../constants';
 
-const ListItem = () => {
+const ListItem = ({data}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -16,7 +16,10 @@ const ListItem = () => {
         }}
         checkBoxColor={'white'}
       />
-      <Text style={styles.item}>List Item </Text>
+      <Text numberOfLines={1} style={styles.item}>
+        {data.task}
+        {''}
+      </Text>
     </View>
   );
 };
@@ -30,6 +33,8 @@ const styles = StyleSheet.create({
   item: {
     color: colors.white,
     marginLeft: wp(2),
+    numberofLines: 1,
+    width: wp(24),
   },
 });
 

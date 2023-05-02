@@ -18,10 +18,9 @@ const Home = () => {
       </View>
       <View style={Styles.listView}>
         <ScrollView style={{backgroundColor: 'green'}} horizontal={true}>
-          <ListCard />
-          <ListCard />
-          <ListCard />
-          <ListCard />
+          {todoList.map(item => {
+            return <ListCard data={item} />;
+          })}
         </ScrollView>
       </View>
     </View>
@@ -29,3 +28,130 @@ const Home = () => {
 };
 
 export default Home;
+
+const todoList = [
+  {
+    id: 1,
+    title: 'Trip to Lahore',
+    tasks: [
+      {
+        id: 1,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 2,
+        task: 'Go to Spice bazar',
+        status: 'pending',
+      },
+      {
+        id: 3,
+        task: 'Visit old lahore',
+        status: 'done',
+      },
+      {
+        id: 4,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 5,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Trip to Lahore',
+    tasks: [
+      {
+        id: 1,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 2,
+        task: 'Go to Spice bazar',
+        status: 'pending',
+      },
+      {
+        id: 3,
+        task: 'Visit old lahore',
+        status: 'done',
+      },
+      {
+        id: 4,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 5,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Trip to Lahore',
+    tasks: [
+      {
+        id: 1,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 2,
+        task: 'Go to Spice bazar',
+        status: 'pending',
+      },
+      {
+        id: 3,
+        task: 'Visit old lahore',
+        status: 'done',
+      },
+      {
+        id: 4,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 5,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Trip to Lahore',
+    tasks: [
+      {
+        id: 1,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 2,
+        task: 'Go to Spice bazar',
+        status: 'pending',
+      },
+      {
+        id: 3,
+        task: 'Visit old lahore',
+        status: 'done',
+      },
+      {
+        id: 4,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+      {
+        id: 5,
+        task: 'Visit Mosque',
+        status: 'done',
+      },
+    ],
+  },
+];
