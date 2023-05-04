@@ -26,15 +26,10 @@ const Home = () => {
       <View style={Styles.listView}>
         <FlatList
           data={todoList}
-          renderItem={({item}) => <ListCard data={item} />}
+          renderItem={({item, index}) => <ListCard data={item} index={index} />}
           // keyExtractor={item => item.id}
           horizontal={true}
         />
-        {/* <ScrollView style={{}} horizontal={true}>
-          {todoList.map(item => {
-            return <ListCard data={item} />;
-          })}
-        </ScrollView> */}
       </View>
     </View>
   );

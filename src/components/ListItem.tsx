@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   item: {
     color: colors.white,
     marginLeft: wp(2),
-    numberofLines: 1,
     width: wp(24),
   },
 });
