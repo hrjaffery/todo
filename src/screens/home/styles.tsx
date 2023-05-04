@@ -8,7 +8,7 @@ const Styles = StyleSheet.create({
   },
   header: {
     justifyContent: 'flex-end',
-    flex: 1.5,
+    flex: 2,
     // backgroundColor: 'red',
   },
   headerElements: {
@@ -17,9 +17,10 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   buttonView: {
-    flex: 1,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    // backgroundColor: 'red',
   },
   line: {
     height: 4,
