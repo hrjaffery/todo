@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
 import ListCard from '../../components/ListCard';
 import Button from '../../components/Button';
 
@@ -24,11 +24,17 @@ const Home = () => {
         <Button />
       </View>
       <View style={Styles.listView}>
-        <ScrollView style={{backgroundColor: 'green'}} horizontal={true}>
+        <FlatList
+          data={todoList}
+          renderItem={({item}) => <ListCard data={item} />}
+          // keyExtractor={item => item.id}
+          horizontal={true}
+        />
+        {/* <ScrollView style={{}} horizontal={true}>
           {todoList.map(item => {
             return <ListCard data={item} />;
           })}
-        </ScrollView>
+        </ScrollView> */}
       </View>
     </View>
   );

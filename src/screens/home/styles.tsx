@@ -35,7 +35,6 @@ const Styles = StyleSheet.create({
   listView: {
     flex: 4,
     alignItems: 'center',
-    backgroundColor: 'red',
     justifyContent: 'center',
   },
 });
