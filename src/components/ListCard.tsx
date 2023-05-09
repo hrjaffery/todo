@@ -3,9 +3,12 @@ import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import {wp, hp} from '../utils';
 import {colors} from '../constants';
-import ListItem from './ListItem';
+import ListCardItem from './ListCardItem';
+import {useNavigation} from '@react-navigation/native';
 
 const ListCard = ({data, index}) => {
+  const navigation = useNavigation();
+
   const getColor = index => {
     if (index === 0) return colors.green;
     if (index === 1) return colors.purple;
@@ -46,11 +49,11 @@ const ListCard = ({data, index}) => {
       <View style={styles.line} />
       {data.tasks.map((task, index) => {
         if (index < 4) {
-          return <ListItem data={task} index={index} />;
+          return <ListCardItem data={task} index={index} />;
         }
         if (index == 4) {
           return (
-            <TouchableOpacity onPress={() => console.log('adf')}>
+            <TouchableOpacity onPress={() => navigation.navigate('TaskList')}>
               <Text
                 style={{textDecorationLine: 'underline', color: colors.white}}>
                 see more

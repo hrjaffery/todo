@@ -7,7 +7,6 @@ import Button from '../../components/Button';
 import Styles from './styles';
 
 const Home = () => {
-  console.log('object');
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
