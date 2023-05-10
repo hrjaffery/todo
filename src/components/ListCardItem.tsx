@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   item: {
     color: colors.white,
-    marginLeft: wp(2),
+    marginLeft: wp(2.5),
     width: wp(24),
   },
 });
