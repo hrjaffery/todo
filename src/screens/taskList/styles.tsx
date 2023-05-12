@@ -29,7 +29,7 @@ const Styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'flex-end',
     // paddingVertical: hp(2),
-    backgroundColor: 'red',
+    backgroundColor: 'lightgreen',
   },
   line: {
     marginLeft: wp(14),

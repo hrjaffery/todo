@@ -41,6 +41,7 @@ export const TaskList = () => {
             task: 'Visit Mosque',
             status: 'done',
           }}
+          dark={false}
         />
       </View>
     </View>

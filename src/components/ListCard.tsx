@@ -6,7 +6,7 @@ import {colors} from '../constants';
 import ListCardItem from './ListCardItem';
 import {useNavigation} from '@react-navigation/native';
 
-const ListCard = ({data, index}) => {
+const ListCard = ({data, index, dark}) => {
   const navigation = useNavigation();
 
   const getColor = index => {
@@ -49,7 +49,7 @@ const ListCard = ({data, index}) => {
       <View style={styles.line} />
       {data.tasks.map((task, index) => {
         if (index < 4) {
-          return <ListCardItem data={task} index={index} />;
+          return <ListCardItem data={task} index={index} dark={false} />;
         }
         if (index == 4) {
           return (
