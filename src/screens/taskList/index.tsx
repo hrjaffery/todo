@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import PieChart from 'react-native-pie-chart';
+import ListCardItem from '../../components/ListCardItem';
 
 import Styles from './styles';
 
@@ -33,7 +34,15 @@ export const TaskList = () => {
         </View>
         <View style={Styles.line} />
       </View>
-      <View style={{flex: 6}}></View>
+      <View style={{flex: 6, backgroundColor: 'black'}}>
+        <ListCardItem
+          data={{
+            id: 1,
+            task: 'Visit Mosque',
+            status: 'done',
+          }}
+        />
+      </View>
     </View>
   );
 };

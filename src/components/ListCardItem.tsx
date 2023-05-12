@@ -4,7 +4,20 @@ import {wp, hp} from '../utils';
 import CheckBox from 'react-native-check-box';
 import {colors} from '../constants';
 
-const ListItem = ({data}) => {
+const ListCardItem = ({data, dark = true, date}) => {
+  const styles = StyleSheet.create({
+    container: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginBottom: hp(2),
+    },
+    item: {
+      color: dark ? colors.black : colors.white,
+      marginLeft: wp(2),
+      width: wp(24),
+    },
+  });
+
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -14,7 +27,7 @@ const ListItem = ({data}) => {
         onClick={() => {
           setIsChecked(!isChecked);
         }}
-        checkBoxColor={'white'}
+        checkBoxColor={dark ? colors.black : colors.white}
       />
       <Text numberOfLines={1} style={styles.item}>
         {data.task}
@@ -24,17 +37,4 @@ const ListItem = ({data}) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    marginBottom: hp(2),
-  },
-  item: {
-    color: colors.white,
-    marginLeft: wp(2),
-    width: wp(24),
-  },
-});
-
-export default ListItem;
+export default ListCardItem;
