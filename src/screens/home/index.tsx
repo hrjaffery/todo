@@ -25,8 +25,10 @@ const Home = () => {
       <View style={Styles.listView}>
         <FlatList
           data={todoList}
-          renderItem={({item, index}) => <ListCard data={item} index={index} />}
-          // keyExtractor={item => item.id}
+          renderItem={({item, index}) => (
+            <ListCard data={item} index={index} dark={false} />
+          )}
+          keyExtractor={(item, index) => item.id}
           horizontal={true}
         />
       </View>

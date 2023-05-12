@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {FlatList, Text, View, TouchableOpacity} from 'react-native';
 import PieChart from 'react-native-pie-chart';
 import ListCardItem from '../../components/ListCardItem';
-
+import {hp} from '../../utils';
 import Styles from './styles';
 
 const widthAndHeight = 20;
@@ -34,18 +34,85 @@ export const TaskList = () => {
         </View>
         <View style={Styles.line} />
       </View>
-      <View style={{flex: 6, backgroundColor: 'black'}}>
-        <ListCardItem
-          data={{
-            id: 1,
-            task: 'Visit Mosque',
-            status: 'done',
-          }}
-          dark={false}
+      <View style={Styles.todoList}>
+        <FlatList
+          data={data}
+          renderItem={({item}) => (
+            <ListCardItem data={item} fullWidth={true} dark={true} date />
+          )}
+          keyExtractor={(item, index) => item.id}
         />
+      </View>
+      <View style={Styles.footer}>
+        <TouchableOpacity style={Styles.addButton}>
+          <Text style={Styles.buttonTitle}>+</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
 };
 
 export default TaskList;
+
+const data = [
+  {
+    id: 1,
+    task: 'Visit Mosque in lahore',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Go to the tailor',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Teach the students themselves',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+  {
+    id: 1,
+    task: 'Visit Mosque',
+    status: 'done',
+    date: '12-03-23',
+  },
+];

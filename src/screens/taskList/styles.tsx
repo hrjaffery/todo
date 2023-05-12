@@ -17,7 +17,7 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   titleView: {
-    marginLeft: wp(14),
+    // marginLeft: wp(14),
     marginBottom: hp(1),
   },
   stats: {
@@ -26,17 +26,42 @@ const Styles = StyleSheet.create({
     marginBottom: hp(2),
   },
   header: {
+    paddingLeft: wp(23),
     flex: 2,
     justifyContent: 'flex-end',
     // paddingVertical: hp(2),
-    backgroundColor: 'lightgreen',
+    // backgroundColor: 'lightgreen',
   },
   line: {
-    marginLeft: wp(14),
+    // marginLeft: wp(14),
     height: 4,
     width: wp(86),
     marginTop: hp(1),
     backgroundColor: 'lightgrey',
+  },
+  todoList: {
+    flex: 6,
+    paddingVertical: hp(2),
+    paddingLeft: wp(23),
+  },
+  footer: {
+    flex: 1.5,
+    // backgroundColor: 'yellow',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  addButton: {
+    width: wp(15),
+    height: wp(15),
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.red,
+    marginRight: wp(5),
+    borderRadius: 5,
+  },
+  buttonTitle: {
+    fontSize: 30,
+    color: colors.white,
   },
 });
 
