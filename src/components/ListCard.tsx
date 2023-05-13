@@ -1,20 +1,46 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {useNavigation, ParamListBase} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+
 import {wp, hp} from '../utils';
 import {colors} from '../constants';
 import ListCardItem from './ListCardItem';
-import {useNavigation} from '@react-navigation/native';
+interface dataItemTaskTypes {
+  id: string;
+  task: string;
+  status: string;
+}
+interface dataItemTypes {
+  id: number;
+  title: string;
+  tasks: dataItemTaskTypes[];
+}
+interface ListCardPropsTypes {
+  data: dataItemTypes;
+  index: number;
+  dark: boolean;
+}
 
-const ListCard = ({data, index, dark}) => {
-  const navigation = useNavigation();
+const ListCard = ({data, index, dark = false}: ListCardPropsTypes) => {
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
-  const getColor = index => {
-    if (index === 0) return colors.green;
-    if (index === 1) return colors.purple;
-    if (index % 2 == 0) return colors.red;
-    if (index % 3 == 0) return colors.green;
-    else return colors.black;
+  const getColor = () => {
+    if (index === 0) {
+      return colors.green;
+    }
+    if (index === 1) {
+      return colors.purple;
+    }
+    if (index % 2 === 0) {
+      return colors.red;
+    }
+    if (index % 3 === 0) {
+      return colors.green;
+    } else {
+      return colors.black;
+    }
   };
 
   const styles = StyleSheet.create({
@@ -26,7 +52,7 @@ const ListCard = ({data, index, dark}) => {
       marginTop: wp(4),
       marginLeft: wp(4),
       borderRadius: 5,
-      backgroundColor: getColor(index),
+      backgroundColor: getColor(),
     },
     title: {
       color: colors.white,
@@ -49,9 +75,9 @@ const ListCard = ({data, index, dark}) => {
       <View style={styles.line} />
       {data.tasks.map((task, index) => {
         if (index < 4) {
-          return <ListCardItem data={task} index={index} dark={false} />;
+          return <ListCardItem data={task} index={index} dark={dark} />;
         }
-        if (index == 4) {
+        if (index === 4) {
           return (
             <TouchableOpacity onPress={() => navigation.navigate('TaskList')}>
               <Text

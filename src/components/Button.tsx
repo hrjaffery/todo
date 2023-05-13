@@ -3,7 +3,7 @@ import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {wp, hp} from '../utils';
 import {colors} from '../constants';
 
-const Button = () => {
+const Button = (): JSX.Element => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button}>

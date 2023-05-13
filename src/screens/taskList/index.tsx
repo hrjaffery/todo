@@ -2,17 +2,24 @@ import React from 'react';
 import {FlatList, Text, View, TouchableOpacity} from 'react-native';
 import PieChart from 'react-native-pie-chart';
 import ListCardItem from '../../components/ListCardItem';
-import {hp} from '../../utils';
 import Styles from './styles';
+import {useNavigation} from '@react-navigation/native';
 
 const widthAndHeight = 20;
 const series = [123, 321];
 const sliceColor = ['#ff6c00', 'lightgray'];
 
 export const TaskList = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
+        <TouchableOpacity
+          style={Styles.close}
+          onPress={() => navigation.goBack()}>
+          <Text style={Styles.closeText}>X</Text>
+        </TouchableOpacity>
         <View style={Styles.titleView}>
           <Text>
             <Text style={Styles.title}>My </Text>
@@ -38,9 +45,12 @@ export const TaskList = () => {
         <FlatList
           data={data}
           renderItem={({item}) => (
-            <ListCardItem data={item} fullWidth={true} dark={true} date />
+            return item;
+            // <ListCardItem data={item} fullWidth={true} dark={true} date />
           )}
-          keyExtractor={(item, index) => item.id}
+          keyExtractor={item => {
+            return item.id;
+          }}
         />
       </View>
       <View style={Styles.footer}>

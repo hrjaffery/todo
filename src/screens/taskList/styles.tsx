@@ -7,33 +7,35 @@ const Styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
-
-  pieChart: {
-    marginRight: wp(2),
+  header: {
+    paddingLeft: wp(23),
+    flex: 2,
+    justifyContent: 'flex-end',
+  },
+  close: {
+    alignItems: 'flex-end',
+    marginRight: wp(6),
+  },
+  closeText: {
+    fontSize: 20,
+  },
+  titleView: {
+    marginBottom: hp(1),
   },
   title: {
     color: colors.black,
     fontSize: 30,
     fontWeight: 'bold',
   },
-  titleView: {
-    // marginLeft: wp(14),
-    marginBottom: hp(1),
-  },
   stats: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: hp(2),
   },
-  header: {
-    paddingLeft: wp(23),
-    flex: 2,
-    justifyContent: 'flex-end',
-    // paddingVertical: hp(2),
-    // backgroundColor: 'lightgreen',
+  pieChart: {
+    marginRight: wp(2),
   },
   line: {
-    // marginLeft: wp(14),
     height: 4,
     width: wp(86),
     marginTop: hp(1),
@@ -46,7 +48,6 @@ const Styles = StyleSheet.create({
   },
   footer: {
     flex: 1.5,
-    // backgroundColor: 'yellow',
     justifyContent: 'center',
     alignItems: 'flex-end',
   },

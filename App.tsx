@@ -12,7 +12,7 @@ import {SafeAreaView} from 'react-native';
 
 function App() {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: 'red'}}>
+    <SafeAreaView style={{flex: 1}}>
       <Navigator />
     </SafeAreaView>
   );
