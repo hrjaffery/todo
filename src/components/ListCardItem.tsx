@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {wp, hp} from '../utils';
 import CheckBox from 'react-native-check-box';
+import {wp, hp} from '../utils';
 import {colors} from '../constants';
-
 interface ListCardItemPropsTypes {
   data: any;
   dark?: boolean;
@@ -21,12 +20,9 @@ const ListCardItem = ({
 }: ListCardItemPropsTypes) => {
   const styles = StyleSheet.create({
     container: {
-      // alignItems: 'center',
-      // flexDirection: 'row',
       marginBottom: hp(2),
     },
     item: {
-      // fontSize: 17,
       color: dark ? colors.black : colors.white,
       marginLeft: wp(3),
       width: fullWidth ? wp(65) : hp(28),
