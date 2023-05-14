@@ -28,7 +28,7 @@ const Home = () => {
           renderItem={({item, index}) => (
             <ListCard data={item} index={index} dark={false} />
           )}
-          keyExtractor={(item, index) => item.id}
+          keyExtractor={item => item.id.toString()}
           horizontal={true}
         />
       </View>

@@ -45,12 +45,9 @@ export const TaskList = () => {
         <FlatList
           data={data}
           renderItem={({item}) => (
-            return item;
-            // <ListCardItem data={item} fullWidth={true} dark={true} date />
+            <ListCardItem data={item} fullWidth={true} dark={true} date />
           )}
-          keyExtractor={item => {
-            return item.id;
-          }}
+          // keyExtractor={item => item.id}
         />
       </View>
       <View style={Styles.footer}>
