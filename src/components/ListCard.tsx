@@ -8,7 +8,7 @@ import {wp, hp} from '../utils';
 import {colors} from '../constants';
 import ListCardItem from './ListCardItem';
 interface dataItemTaskTypes {
-  id: string;
+  id: number;
   task: string;
   status: string;
 }
@@ -75,7 +75,7 @@ const ListCard = ({data, index, dark = false}: ListCardPropsTypes) => {
       <View style={styles.line} />
       {data.tasks.map((task, index) => {
         if (index < 4) {
-          return <ListCardItem data={task} index={index} dark={dark} />;
+          return <ListCardItem data={task} dark={dark} />;
         }
         if (index === 4) {
           return (

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import CheckBox from 'react-native-check-box';
+import Text from '../components/Text';
 import {wp, hp} from '../utils';
 import {colors} from '../constants';
 interface ListCardItemPropsTypes {
