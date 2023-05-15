@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text, StyleProp} from 'react-native';
+import {Text, ViewStyle} from 'react-native';
 
 interface TextPropsTypes {
   children: any;
-  style?: StyleProp;
-  numberoflines?: number;
+  style?: ViewStyle;
+  numberOfLines?: number;
 }
 
 const CustomText = ({children, style, numberOfLines}: TextPropsTypes) => {

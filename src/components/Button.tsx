@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, StyleSheet} from 'react-native';
+import Text from '../components/Text';
 import {wp, hp} from '../utils';
 import {colors} from '../constants';
 

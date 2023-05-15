@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {FlatList, Text, View} from 'react-native';
+import {FlatList, View} from 'react-native';
+import Text from '../../components/Text';
 import ListCard from '../../components/ListCard';
 import Button from '../../components/Button';
 

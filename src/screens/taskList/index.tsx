@@ -1,5 +1,6 @@
 import React from 'react';
-import {FlatList, Text, View, TouchableOpacity} from 'react-native';
+import {FlatList, View, TouchableOpacity} from 'react-native';
+import Text from '../../components/Text';
 import PieChart from 'react-native-pie-chart';
 import ListCardItem from '../../components/ListCardItem';
 import Styles from './styles';
