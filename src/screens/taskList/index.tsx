@@ -4,14 +4,15 @@ import Text from '../../components/Text';
 import PieChart from 'react-native-pie-chart';
 import ListCardItem from '../../components/ListCardItem';
 import Styles from './styles';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, ParamListBase} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 const widthAndHeight = 20;
 const series = [123, 321];
 const sliceColor = ['#ff6c00', 'lightgray'];
 
 export const TaskList = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   return (
     <View style={Styles.container}>
@@ -52,7 +53,9 @@ export const TaskList = () => {
         />
       </View>
       <View style={Styles.footer}>
-        <TouchableOpacity style={Styles.addButton}>
+        <TouchableOpacity
+          style={Styles.addButton}
+          onPress={() => navigation.navigate('AddTask')}>
           <Text style={Styles.buttonTitle}>+</Text>
         </TouchableOpacity>
       </View>
