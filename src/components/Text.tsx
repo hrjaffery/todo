@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, TextStyle} from 'react-native';
+import {fontsSize} from '../constants';
 
 interface TextPropsTypes {
   children: any;
@@ -8,8 +9,12 @@ interface TextPropsTypes {
 }
 
 const CustomText = ({children, style, numberOfLines = 0}: TextPropsTypes) => {
+  console.log(fontsSize.small);
   return (
-    <Text style={style} numberOfLines={numberOfLines}>
+    <Text
+      allowFontScaling={false}
+      style={[{fontSize: fontsSize.small}, style]}
+      numberOfLines={numberOfLines}>
       {children}
     </Text>
   );

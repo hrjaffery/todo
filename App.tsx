@@ -7,7 +7,6 @@
 
 import React from 'react';
 import Navigator from './src/navigator';
-// import Home from './src/screens/home';
 import {SafeAreaView} from 'react-native';
 
 function App() {
