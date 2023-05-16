@@ -15,7 +15,7 @@ const CustomText = ({children, style, numberOfLines = 0}: TextPropsTypes) => {
       allowFontScaling={false}
       style={[{fontSize: fontsSize.small}, style]}
       numberOfLines={numberOfLines}>
-      {/* {children} */}
+      {children}
     </Text>
   );
 };
