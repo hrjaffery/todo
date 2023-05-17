@@ -33,6 +33,14 @@ const Styles = StyleSheet.create({
     height: wp(4.5),
     marginHorizontal: wp(4.8),
   },
+  deleteIcon: {
+    width: wp(6),
+    height: wp(6),
+    resizeMode: 'contain',
+    padding: 2,
+    tintColor: colors.red,
+    // marginHorizontal: wp(4.8),
+  },
   title: {
     color: colors.black,
     fontSize: 30,

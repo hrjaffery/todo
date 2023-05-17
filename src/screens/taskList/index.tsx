@@ -23,10 +23,11 @@ export const TaskList = () => {
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
-        <TouchableOpacity
-          style={Styles.close}
-          onPress={() => navigation.goBack()}>
-          <Text style={Styles.closeText}>X</Text>
+        <TouchableOpacity style={Styles.close} onPress={() => 0}>
+          <Image
+            style={Styles.deleteIcon}
+            source={require('../../assets/delete.png')}
+          />
         </TouchableOpacity>
 
         <View style={Styles.row1}>
@@ -80,7 +81,10 @@ export const TaskList = () => {
             <TouchableOpacity style={Styles.closeModal} onPress={toggleModal}>
               <Text style={Styles.closeText}>X</Text>
             </TouchableOpacity>
-            <TextInput style={Styles.textInput} />
+            <TextInput
+              placeholder="Enter task here.."
+              style={Styles.textInput}
+            />
             <TouchableOpacity style={Styles.modalButton} onPress={toggleModal}>
               <Text style={Styles.modalButtonText}>Add</Text>
             </TouchableOpacity>
