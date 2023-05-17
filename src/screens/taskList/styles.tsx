@@ -12,18 +12,19 @@ const Styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'flex-end',
   },
-  close: {
-    alignItems: 'flex-end',
-    marginRight: wp(6),
-  },
-  closeText: {
-    fontSize: 20,
-    color: colors.red,
-  },
   row1: {
     flexDirection: 'row',
     alignItems: 'center',
     marginLeft: wp(-20),
+  },
+  delete: {
+    flex: 1,
+    alignItems: 'flex-end',
+    marginRight: wp(4),
+  },
+  closeText: {
+    fontSize: 20,
+    color: colors.red,
   },
   titleView: {
     marginBottom: hp(1),
@@ -31,11 +32,11 @@ const Styles = StyleSheet.create({
   backIcon: {
     width: wp(4.5),
     height: wp(4.5),
-    marginHorizontal: wp(4.8),
+    marginHorizontal: wp(7.5),
   },
   deleteIcon: {
-    width: wp(6),
-    height: wp(6),
+    width: wp(5),
+    height: wp(5),
     resizeMode: 'contain',
     padding: 2,
     tintColor: colors.red,
@@ -84,6 +85,7 @@ const Styles = StyleSheet.create({
     color: colors.white,
   },
   modal: {
+    borderRadius: 5,
     height: hp(25),
     justifyContent: 'center',
     alignItems: 'center',
@@ -91,9 +93,14 @@ const Styles = StyleSheet.create({
   },
   closeModal: {
     alignSelf: 'flex-end',
-    paddingHorizontal: wp(10),
-    paddingVertical: wp(4),
+    marginHorizontal: wp(10),
+    padding: wp(2),
+    marginVertical: wp(4),
+    borderWidth: 1,
+    borderRadius: 4,
+    borderColor: colors.red,
   },
+
   textInput: {
     width: wp(70),
     borderWidth: 1,

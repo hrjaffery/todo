@@ -23,17 +23,8 @@ export const TaskList = () => {
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
-        <TouchableOpacity style={Styles.close} onPress={() => 0}>
-          <Image
-            style={Styles.deleteIcon}
-            source={require('../../assets/delete.png')}
-          />
-        </TouchableOpacity>
-
         <View style={Styles.row1}>
-          <TouchableOpacity
-            style={Styles.close}
-            onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={{}} onPress={() => navigation.goBack()}>
             <Image
               style={Styles.backIcon}
               source={require('../../assets/back.png')}
@@ -45,6 +36,12 @@ export const TaskList = () => {
               <Text style={{...Styles.title, color: 'lightgray'}}>Tasks</Text>
             </Text>
           </View>
+          <TouchableOpacity style={Styles.delete} onPress={() => 0}>
+            <Image
+              style={Styles.deleteIcon}
+              source={require('../../assets/delete.png')}
+            />
+          </TouchableOpacity>
         </View>
         <View style={{...Styles.titleView, ...Styles.stats}}>
           <View style={Styles.pieChart}>
@@ -79,7 +76,10 @@ export const TaskList = () => {
         <Modal isVisible={isModalVisible} onBackdropPress={toggleModal}>
           <View style={Styles.modal}>
             <TouchableOpacity style={Styles.closeModal} onPress={toggleModal}>
-              <Text style={Styles.closeText}>X</Text>
+              <Image
+                style={Styles.deleteIcon}
+                source={require('../../assets/cross.png')}
+              />
             </TouchableOpacity>
             <TextInput
               placeholder="Enter task here.."
