@@ -18,6 +18,7 @@ const Styles = StyleSheet.create({
   },
   closeText: {
     fontSize: 20,
+    color: colors.red,
   },
   titleView: {
     marginBottom: hp(1),
@@ -62,6 +63,38 @@ const Styles = StyleSheet.create({
   },
   buttonTitle: {
     fontSize: 30,
+    color: colors.white,
+  },
+  modal: {
+    height: hp(25),
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
+  closeModal: {
+    alignSelf: 'flex-end',
+    paddingHorizontal: wp(10),
+    paddingVertical: wp(4),
+  },
+  textInput: {
+    width: wp(70),
+    borderWidth: 1,
+    borderRadius: 4,
+    borderColor: colors.red,
+    padding: 10,
+    // backgroundColor: 'white',
+  },
+  modalButton: {
+    alignSelf: 'flex-end',
+    marginHorizontal: wp(10),
+    marginVertical: wp(4),
+    padding: wp(3),
+    paddingHorizontal: wp(8),
+    // borderWidth: 1,
+    borderRadius: 4,
+    backgroundColor: colors.red,
+  },
+  modalButtonText: {
     color: colors.white,
   },
 });

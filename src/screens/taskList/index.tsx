@@ -1,5 +1,6 @@
-import React from 'react';
-import {FlatList, View, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {FlatList, View, TouchableOpacity, TextInput} from 'react-native';
+import Modal from 'react-native-modal';
 import Text from '../../components/Text';
 import PieChart from 'react-native-pie-chart';
 import ListCardItem from '../../components/ListCardItem';
@@ -13,6 +14,11 @@ const sliceColor = ['#ff6c00', 'lightgray'];
 
 export const TaskList = () => {
   const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
 
   return (
     <View style={Styles.container}>
@@ -22,6 +28,7 @@ export const TaskList = () => {
           onPress={() => navigation.goBack()}>
           <Text style={Styles.closeText}>X</Text>
         </TouchableOpacity>
+
         <View style={Styles.titleView}>
           <Text>
             <Text style={Styles.title}>My </Text>
@@ -49,16 +56,27 @@ export const TaskList = () => {
           renderItem={({item}) => (
             <ListCardItem data={item} fullWidth={true} dark={true} date />
           )}
-          // keyExtractor={item => item.id}
+          keyExtractor={item => item.id.toString()}
         />
       </View>
       <View style={Styles.footer}>
-        <TouchableOpacity
-          style={Styles.addButton}
-          onPress={() => navigation.navigate('AddTask')}>
+        <TouchableOpacity style={Styles.addButton} onPress={toggleModal}>
           <Text style={Styles.buttonTitle}>+</Text>
         </TouchableOpacity>
       </View>
+      {isModalVisible && (
+        <Modal isVisible={isModalVisible} onBackdropPress={toggleModal}>
+          <View style={Styles.modal}>
+            <TouchableOpacity style={Styles.closeModal} onPress={toggleModal}>
+              <Text style={Styles.closeText}>X</Text>
+            </TouchableOpacity>
+            <TextInput style={Styles.textInput} />
+            <TouchableOpacity style={Styles.modalButton} onPress={toggleModal}>
+              <Text style={Styles.modalButtonText}>Add</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+      )}
     </View>
   );
 };
@@ -73,55 +91,55 @@ const data = [
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 2,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 3,
     task: 'Go to the tailor',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 4,
     task: 'Teach the students themselves',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 5,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 6,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 7,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 8,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 9,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
   },
   {
-    id: 1,
+    id: 10,
     task: 'Visit Mosque',
     status: 'done',
     date: '12-03-23',
