@@ -9,7 +9,6 @@ interface TextPropsTypes {
 }
 
 const CustomText = ({children, style, numberOfLines = 0}: TextPropsTypes) => {
-  console.log(fontsSize.small);
   return (
     <Text
       allowFontScaling={false}
