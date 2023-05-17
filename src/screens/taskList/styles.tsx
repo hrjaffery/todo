@@ -13,7 +13,7 @@ const Styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   close: {
-    alignItems: 'flex-end',
+    // alignItems: 'flex-end',
     marginRight: wp(6),
   },
   closeText: {
