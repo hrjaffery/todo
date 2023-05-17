@@ -13,15 +13,25 @@ const Styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   close: {
-    // alignItems: 'flex-end',
+    alignItems: 'flex-end',
     marginRight: wp(6),
   },
   closeText: {
     fontSize: 20,
     color: colors.red,
   },
+  row1: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: wp(-20),
+  },
   titleView: {
     marginBottom: hp(1),
+  },
+  backIcon: {
+    width: wp(4.5),
+    height: wp(4.5),
+    marginHorizontal: wp(4.8),
   },
   title: {
     color: colors.black,

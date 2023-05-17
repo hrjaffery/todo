@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FlatList, View, TouchableOpacity, TextInput} from 'react-native';
+import {FlatList, View, TouchableOpacity, TextInput, Image} from 'react-native';
 import Modal from 'react-native-modal';
 import Text from '../../components/Text';
 import PieChart from 'react-native-pie-chart';
@@ -29,11 +29,21 @@ export const TaskList = () => {
           <Text style={Styles.closeText}>X</Text>
         </TouchableOpacity>
 
-        <View style={Styles.titleView}>
-          <Text>
-            <Text style={Styles.title}>My </Text>
-            <Text style={{...Styles.title, color: 'lightgray'}}>Tasks</Text>
-          </Text>
+        <View style={Styles.row1}>
+          <TouchableOpacity
+            style={Styles.close}
+            onPress={() => navigation.goBack()}>
+            <Image
+              style={Styles.backIcon}
+              source={require('../../assets/back.png')}
+            />
+          </TouchableOpacity>
+          <View style={Styles.titleView}>
+            <Text>
+              <Text style={Styles.title}>My </Text>
+              <Text style={{...Styles.title, color: 'lightgray'}}>Tasks</Text>
+            </Text>
+          </View>
         </View>
         <View style={{...Styles.titleView, ...Styles.stats}}>
           <View style={Styles.pieChart}>
