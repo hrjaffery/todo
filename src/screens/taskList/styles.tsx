@@ -40,7 +40,6 @@ const Styles = StyleSheet.create({
     resizeMode: 'contain',
     padding: 2,
     tintColor: colors.red,
-    // marginHorizontal: wp(4.8),
   },
   title: {
     color: colors.black,
@@ -94,7 +93,7 @@ const Styles = StyleSheet.create({
   closeModal: {
     alignSelf: 'flex-end',
     marginHorizontal: wp(10),
-    padding: wp(2),
+    padding: wp(1.5),
     marginVertical: wp(4),
     borderWidth: 1,
     borderRadius: 4,
@@ -107,7 +106,6 @@ const Styles = StyleSheet.create({
     borderRadius: 4,
     borderColor: colors.red,
     padding: 10,
-    // backgroundColor: 'white',
   },
   modalButton: {
     alignSelf: 'flex-end',
@@ -115,7 +113,6 @@ const Styles = StyleSheet.create({
     marginVertical: wp(4),
     padding: wp(3),
     paddingHorizontal: wp(8),
-    // borderWidth: 1,
     borderRadius: 4,
     backgroundColor: colors.red,
   },
