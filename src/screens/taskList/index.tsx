@@ -8,7 +8,7 @@ import Styles from './styles';
 import {useNavigation, ParamListBase} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const widthAndHeight = 20;
+const widthAndHeight = 21;
 const series = [123, 321];
 const sliceColor = ['#ff6c00', 'lightgray'];
 
