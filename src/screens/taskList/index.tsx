@@ -17,7 +17,7 @@ export const TaskList = () => {
   const [isModalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
-    setModalVisible(!isModalVisible);
+    setModalVisible(!isModalVisiblee);
   };
 
   return (
