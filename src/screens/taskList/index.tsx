@@ -8,7 +8,7 @@ import Styles from './styles';
 import {useNavigation, ParamListBase} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const widthAndHeight = 21;
+const widthAndHeight = 20;
 const series = [123, 321];
 const sliceColor = ['#ff6c00', 'lightgray'];
 
@@ -17,7 +17,7 @@ export const TaskList = () => {
   const [isModalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
-    setModalVisible(!isModalVisible);
+    setModalVisible(!isModalVisiblee);
   };
 
   return (
