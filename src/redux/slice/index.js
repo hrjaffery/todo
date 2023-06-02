@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 console.log('counterReducer', counterReducer);
 
-export const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   counter: counterReducer,
 });
 
@@ -18,3 +18,5 @@ export const rootReducer = combineReducers({
 // const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // export default persistedReducer;
+
+export default rootReducer;
