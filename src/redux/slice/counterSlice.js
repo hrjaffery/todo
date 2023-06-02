@@ -12,5 +12,5 @@ const counterSlice = createSlice({
     },
   },
 });
-console.log('Counter slice', counterSlice);
+console.log('Counter slice', counterSlice.reducer);
 export default counterSlice.reducer;

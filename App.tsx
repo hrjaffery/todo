@@ -8,11 +8,18 @@
 import React from 'react';
 import Navigator from './src/navigator';
 import {SafeAreaView} from 'react-native';
+import {store, persistor} from './src/redux/store';
+import {PersistGate} from 'redux-persist/integration/react';
+import {Provider} from 'react-redux';
 
 function App() {
   return (
     <SafeAreaView style={{flex: 1}}>
-      <Navigator />
+      <Provider store={store}>
+        {/* <PersistGate persistor={persistor}> */}
+        <Navigator />
+        {/* </PersistGate> */}
+      </Provider>
     </SafeAreaView>
   );
 }
