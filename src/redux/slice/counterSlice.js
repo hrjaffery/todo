@@ -5,12 +5,14 @@ const counterSlice = createSlice({
   initialState: 0,
   reducers: {
     incrementCounter(state, action) {
-      state++;
+      console.log(state, action);
+      return state + 1;
     },
     decrementCounter(state, action) {
-      state--;
+      return state - 1;
     },
   },
 });
-console.log('Counter slice', counterSlice.reducer);
+
+export const {incrementCounter, decrementCounter} = counterSlice.actions;
 export default counterSlice.reducer;

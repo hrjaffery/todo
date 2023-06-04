@@ -4,10 +4,16 @@ import Text from '../components/Text';
 import {wp, hp} from '../utils';
 import {colors} from '../constants';
 
+import {useDispatch, useSelector} from 'react-redux';
+import {incrementCounter} from '../redux/slice/counterSlice';
+
 const Button = (): JSX.Element => {
+  const dispatch = useDispatch();
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => dispatch(incrementCounter(1))}>
         <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       <Text>Add List</Text>
