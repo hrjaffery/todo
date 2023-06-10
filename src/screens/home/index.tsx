@@ -15,7 +15,7 @@ const Home = () => {
         const json = await response.json();
         console.log(json);
       } catch (error) {
-        console.error('error', error);
+        console.error(error);
       }
     };
 
