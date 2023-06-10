@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {useEffect} from 'react';
 import {FlatList, View} from 'react-native';
 import Text from '../../components/Text';
 import ListCard from '../../components/ListCard';
@@ -8,6 +8,19 @@ import {useDispatch, useSelector} from 'react-redux';
 import Styles from './styles';
 
 const Home = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://10.0.2.2:3000/api/data'); // Replace with your API endpoint
+        const json = await response.json();
+        console.log(json);
+      } catch (error) {
+        console.error('error', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const data = useSelector(state => state.counter);
   return (
     <View style={Styles.container}>
